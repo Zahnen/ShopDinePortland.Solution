@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using ShopDinePortland.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ShopDinePortland.Controllers
 {
@@ -32,6 +33,22 @@ namespace ShopDinePortland.Controllers
     public void Post([FromBody] Restaurant restaurant)
     {
       _db.Restaurants.Add(restaurant);
+      _db.SaveChanges();
+    }
+
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] Restaurant restaurant)
+    {
+      restaurant.RestaurantId = id;
+      _db.Entry(restaurant).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
+
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+      var restaurantToDelete = _db.Restaurants.FirstOrDefault(entry => entry.RestaurantId == id);
+      _db.Restaurants.Remove(restaurantToDelete);
       _db.SaveChanges();
     }
   }
