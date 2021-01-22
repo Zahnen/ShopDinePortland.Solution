@@ -5,6 +5,7 @@ using ShopDinePortland.Entities;
 
 namespace ShopDinePortland.Controllers
 {
+  [Authorize]
   [Route("api/[controller]")]
   [ApiController]
   public class UsersController : ControllerBase
@@ -16,6 +17,7 @@ namespace ShopDinePortland.Controllers
       _userService = userService;
     }
 
+    [AllowAnonymous]
     [HttpPost("authenticate")]
     public IActionResult Authenticate([FromBody]User userParam)
     {
@@ -28,6 +30,7 @@ namespace ShopDinePortland.Controllers
       return Ok(user);
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpGet]
     public IActionResult GetAll()
     {
@@ -35,6 +38,7 @@ namespace ShopDinePortland.Controllers
       return Ok(users);
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {

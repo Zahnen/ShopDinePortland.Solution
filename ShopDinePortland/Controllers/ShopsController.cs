@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using ShopDinePortland.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using ShopDinePortland.Models;
+using ShopDinePortland.Entities;
+using ShopDinePortland.Services;
 
 namespace ShopDinePortland.Controllers
 {
@@ -16,7 +19,8 @@ namespace ShopDinePortland.Controllers
     {
       _db = db;
     }
-
+    
+    [Authorize]
     [HttpGet]
     public ActionResult<IEnumerable<Shop>> Get(string name, string type, string neighborhood)
     {
@@ -36,12 +40,14 @@ namespace ShopDinePortland.Controllers
       return query.ToList();
     }
 
+    [Authorize]
     [HttpGet("{id}")]
     public ActionResult<Shop> Get(int id)
     {
       return _db.Shops.FirstOrDefault(entry => entry.ShopId == id);
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpPost]
     public void Post([FromBody] Shop shop)
     {
@@ -49,6 +55,7 @@ namespace ShopDinePortland.Controllers
       _db.SaveChanges();
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Shop shop)
     {
@@ -57,6 +64,7 @@ namespace ShopDinePortland.Controllers
       _db.SaveChanges();
     }
 
+    [Authorize(Roles = Role.Admin)]
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
