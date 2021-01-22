@@ -1,0 +1,14 @@
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\bin\Debug\netcoreapp2.2\ShopDinePortland.Solution.deps.json
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\bin\Debug\netcoreapp2.2\ShopDinePortland.Solution.runtimeconfig.json
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\bin\Debug\netcoreapp2.2\ShopDinePortland.Solution.runtimeconfig.dev.json
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\bin\Debug\netcoreapp2.2\ShopDinePortland.Solution.dll
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\bin\Debug\netcoreapp2.2\ShopDinePortland.Solution.pdb
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.csprojAssemblyReference.cache
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.csproj.CoreCompileInputs.cache
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.RazorAssemblyInfo.cache
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.RazorAssemblyInfo.cs
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.AssemblyInfoInputs.cache
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.AssemblyInfo.cs
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.RazorTargetAssemblyInfo.cache
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.dll
+C:\Users\Zahnen\Desktop\ShopDinePortland.Solution\obj\Debug\netcoreapp2.2\ShopDinePortland.Solution.pdb
