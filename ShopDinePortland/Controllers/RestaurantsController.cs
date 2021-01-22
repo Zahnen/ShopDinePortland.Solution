@@ -18,9 +18,26 @@ namespace ShopDinePortland.Controllers
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Restaurant>> Get()
+    public ActionResult<IEnumerable<Restaurant>> Get(string name, string cuisine, string service, string neighborhood)
     {
-      return _db.Restaurants.ToList();
+      var query = _db.Restaurants.AsQueryable();
+      if(name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+      if(cuisine != null)
+      {
+        query = query.Where(entry => entry.Cuisine == cuisine);
+      }
+      if(service != null)
+      {
+        query = query.Where(entry => entry.Service == service);
+      }
+      if(neighborhood != null)
+      {
+        query = query.Where(entry => entry.Neighborhood == neighborhood);
+      }
+      return query.ToList();
     }
 
     [HttpGet("{id}")]
