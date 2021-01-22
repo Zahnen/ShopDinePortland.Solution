@@ -1,6 +1,6 @@
 namespace ShopDinePortland.Entities
 {
-  public static class Role
+  public class User
   {
     public int Id { get; set; }
     public string FirstName { get; set; }
