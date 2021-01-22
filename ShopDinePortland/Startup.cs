@@ -24,7 +24,6 @@ namespace ShopDinePortland
 
       public void ConfigureServices(IServiceCollection services)
       {
-        services.AddCors();
         services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
         services.AddEntityFrameworkMySql()
@@ -59,13 +58,7 @@ namespace ShopDinePortland
 
       public void Configure(IApplicationBuilder app, IHostingEnvironment env)
       {
-        app.UseCors(x => x
-          .AllowAnyOrigin()
-          .AllowAnyMethod()
-          .AllowAnyHeader());
-
         app.UseAuthentication();
-        
         app.UseMvc();
       }
     }
