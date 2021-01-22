@@ -18,7 +18,7 @@ namespace ShopDinePortland.Services
     User GetById(int id);
   }
 
-  public class UserService
+  public class UserService : IUserService
   {
     private List<User> _users = new List<User>
     { 
