@@ -21,5 +21,18 @@ namespace ShopDinePortland.Controllers
     {
       return _db.Restaurants.ToList();
     }
+
+    [HttpGet("{id}")]
+    public ActionResult<Restaurant> Get(int id)
+    {
+      return _db.Restaurants.FirstOrDefault(entry => entry.RestaurantId == id);
+    }
+
+    [HttpPost]
+    public void Post([FromBody] Restaurant restaurant)
+    {
+      _db.Restaurants.Add(restaurant);
+      _db.SaveChanges();
+    }
   }
 }
