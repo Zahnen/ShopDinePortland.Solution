@@ -20,7 +20,10 @@ namespace ShopDinePortland.Models
           new Restaurant { RestaurantId = 2, Name = "DeNicola's", Cuisine = "Italian", Service="Casual Dining", Neighborhood="Southeast"},
           new Restaurant { RestaurantId = 3, Name = "PDX Sliders", Cuisine = "American", Service="Casual Dining", Neighborhood="Sellwood"},
           new Restaurant { RestaurantId = 4, Name = "Guero", Cuisine = "Mexican", Service="Casual Dining", Neighborhood="Laurelhurst"},
-          new Restaurant { RestaurantId = 5, Name = "Stretch The Noodle", Cuisine = "Chinese", Service="To-go", Neighborhood="Downtown"}
+          new Restaurant { RestaurantId = 5, Name = "Stretch The Noodle", Cuisine = "Chinese", Service="To-go", Neighborhood="Downtown"},
+          new Restaurant { RestaurantId = 6, Name = "Han Oak", Cuisine = "Korean", Service="Casual Dining", Neighborhood="Downtown"},
+          new Restaurant { RestaurantId = 7, Name = "Maurice", Cuisine = "Scandanavian", Service="Casual Dining", Neighborhood="Downtown"}
+
         );
 
       builder.Entity<Shop>()
@@ -29,7 +32,10 @@ namespace ShopDinePortland.Models
           new Shop { ShopId = 2, Name = "Machus", Type = "Clothing", Neighborhood="East Burnside"},
           new Shop { ShopId = 3, Name = "Hay", Type = "Homegoods", Neighborhood="Pearl"},
           new Shop { ShopId = 4, Name = "Stars Mall", Type = "Antiques", Neighborhood="Sellwood"},
-          new Shop { ShopId = 5, Name = "Beam and Anchor", Type = "Homegoods", Neighborhood="Northeast"}
+          new Shop { ShopId = 5, Name = "Beam and Anchor", Type = "Homegoods", Neighborhood="Northeast"},
+          new Shop { ShopId = 6, Name = "Spartan Shop", Type = "Homegoods", Neighborhood="Southeast"},
+          new Shop { ShopId = 7, Name = "Woonwinkel", Type = "Homegoods", Neighborhood="West End"}
+
         );
     }
   }
