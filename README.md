@@ -88,8 +88,8 @@ In order to explore the endpoints of this API, we suggest that you use [Postman]
 - Navigate to the "Body" tab of your request and select "Raw Data" from the offered options followed by "JSON" in the dropdown to the right of your selection. Enter the following code snippet into the body field
 ```
 {
-    "Username": "admin",
-    "Password": "admin"
+  "Username": "admin",
+  "Password": "admin"
 }
 ```
 The response will generate a bearer token. Copy this token for use when you create a new request (GET, POST, DELETE, PUT). When creating a new request following receipt of your token, navigate to the "Authorizations" tab of the request. Select "Bearer Token" as the authorization type, and paste your copied token into the "Token" field. This token will authorize all HTTP requests for Restaurants, Shops, and Users.
@@ -101,8 +101,8 @@ The response will generate a bearer token. Copy this token for use when you crea
 - Navigate to the "Body" tab of your request and select "Raw Data" from the offered options followed by "JSON" in the dropdown to the right of your selection. Enter the following code snippet into the body field
 ```
 {
-    "Username": "user",
-    "Password": "user"
+  "Username": "user",
+  "Password": "user"
 }
 ```
 The response will generate a bearer token. Copy this token for use when you create a new GET request. When creating a new request following receipt of your token, navigate to the "Authorizations" tab of the request. Select "Bearer Token" as the authorization type, and paste your copied token into the "Token" field. This token will authorize your GET requests for Restaurants, Shops, and Users only. 
@@ -170,16 +170,15 @@ DELETE /api/shops{id}
 
 #### Example Shop Query
 
-`http://localhost:5000/api/restaurants/?type=antiques&neighborhood=sellwood`
+`http://localhost:5000/api/shops/?type=antiques&neighborhood=sellwood`
 
 ### Sample Shop JSON Response
 
 ```
 {
-  "restaurantId": 3,
-  "name": "PDX Sliders",
-  "cuisine": "American",
-  "service": "Casual Dining",
+  "shopId": 4,
+  "name": "Stars Mall",
+  "type": "Antiques",
   "neighborhood": "Sellwood"
 }
 ```
@@ -205,9 +204,7 @@ _This application required use of the following programs/languages/libraries/doc
 - _[Git/GitHub](https://github.com/)_
 - _[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)_
 - _[.NET Core v 2.2](https://dotnet.microsoft.com/download)_
-- _[ASP.NET MVC](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started)_
 - _[ASP.NET Identity](https://docs.microsoft.com/en-us/aspnet/identity/overview/getting-started/introduction-to-aspnet-identity)_
-- _[ASP.NET Razor](https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c)_
 - _[EF Core](https://docs.microsoft.com/en-us/ef/core/)_
 - _[MySQL/My SQL Workbench](https://www.mysql.com/)_
 - _[Postman](https://www.postman.com/)_
